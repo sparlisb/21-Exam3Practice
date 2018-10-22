@@ -216,7 +216,15 @@ def practice_problem3(start, n, threshold):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   < 15 minutes.
     ####################################################################
-
+    x = 0
+    l = []
+    y = 0
+    while x < n:
+        if math.sin(start + y) + math.cos(start + y) > threshold:
+            l = l + [start + y]
+            x = x + 1
+        y = y + 1
+    return l
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
